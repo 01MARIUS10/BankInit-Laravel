@@ -1,0 +1,43 @@
+//creation du projet//
+composer create-project --prefer-dist laravel/laravel monProjet
+
+composer global require laravel/installer
+laravel new example-app
+
+
+
+//demarrer le server//
+php artisan serve [--port:3000]
+
+
+/# BLADE #/
+Blade est le moteur de template simple mais puissant inclus avec Laravel.
+ Contrairement à certains moteurs de création de modèles PHP,
+ Blade ne vous empêche pas d'utiliser du code PHP simple dans vos modèles.
+ En fait, tous les modèles Blade sont compilés en code PHP simple et
+ mis en cache jusqu'à ce qu'ils soient modifiés,ce qui signifie
+ que Blade n'ajoute pratiquement aucune surcharge à votre application.
+ Les fichiers de modèle de lame utilisent l'extension de fichier .
+ blade.php et sont généralement stockés dans le répertoire resources/views.
+
+Les vues de lame peuvent être renvoyées à partir de routes ou de contrôleurs
+à l'aide de l'assistant de vue globale. Bien sûr, comme mentionné dans
+la documentation sur les vues, les données peuvent être transmises à la vue Blade
+en utilisant le deuxième argument de l'assistant de vue :
+
+Par défaut, Blade (et l'assistant Laravel e) encodera deux fois les entités HTML.
+Si vous souhaitez désactiver le double encodage, appelez la méthode
+Blade::withoutDoubleEncoding à partir de la méthode de démarrage de votre AppServiceProvider :
+
+
+// Crud
+1/Create database
+2/change the .env file to conform about the database
+3/remove mb4 from config/database.php->mysql.charset and collation
+4/create table in the database : php artisan make:migration create_pret_table (result: creation du fichier dtbase/migrations/migration.php)
+                                php artisan migrate | ajout des colonnes dans la migration sue le schema::create('pret'...) (result:creation des tables et column dans la database)
+5/creation du controller : php artisan make:controller pretController --ressource
+6/ajouter le controller attributs
+7/create model : php artisant make:model pret
+8/ad all column of the method
+9/create de views ,listing.blade.php

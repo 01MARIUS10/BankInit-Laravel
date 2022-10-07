@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Water+Brush&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:var(--bs-dark); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: #525252 !important
+}
+
+.nav-link .fa {
+    transition: all 1s
+}
+
+.nav-link:hover .fa {
+    transform: rotate(360deg)
+}
+
+svg{
+    margin: 10px;
+}
+/* ul.nav{
+    height: 40%;
+    overflow-y: auto;
+} */
+div a{
+    margin-left: auto;
+    margin-right: auto;
+}
+button .btn{
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+}
+div .sideMenu{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width:20vw;
+    height: 100vh;
+    max-width: 300px;
+    min-width: 150px;
+}
+.sideMenu a{
+    border-bottom: 2px solid #525252;
+}
+.sideMenu ul li{
+    width: 100%;
+}
+.active{
+    background-color: #525252;
+}

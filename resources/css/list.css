@@ -1,0 +1,21 @@
+tbody th button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+tbody button i{
+    opacity: 1;
+    color: white;
+}
+.container-fluid{
+    overflow: auto;
+}
+.table{
+    font-size: small;
+}
+.modifyGrey{
+    background-color: rgb(180, 194, 194);
+}
+.modifyYellow{
+    background-color: rgb(51, 51, 45);
+}
