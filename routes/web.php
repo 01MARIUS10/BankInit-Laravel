@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\PretController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PretController;
 
 
 /*
@@ -22,16 +22,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Route::resources('/pret','PretController::class');
-Route::get('/pret',[PretController::class,'index']);
-Route::get('/pret/new',[PretController::class,'create']);
-Route::post('/pret/add',[PretController::class,'store']);
-Route::get('/pret/{id}',[PretController::class,'show']);
-Route::get('/pret/edit/{id}',[PretController::class,'edit']);
-Route::post('/pret/update/{id}',[PretController::class,'update']);
-Route::get('/pret/delete/{id}',[PretController::class,'destroy']);
+Route::get('/pret',[\App\Http\Controllers\PretController::class,'index']);
+Route::get('/pret/new',[\App\Http\Controllers\PretController::class,'create']);
+Route::post('/pret/add',[\App\Http\Controllers\PretController::class,'store']);
+Route::get('/pret/{id}',[\App\Http\Controllers\PretController::class,'show']);
+Route::get('/pret/edit/{id}',[\App\Http\Controllers\PretController::class,'edit']);
+Route::post('/pret/update/{id}',[\App\Http\Controllers\PretController::class,'update']);
+Route::get('/pret/delete/{id}',[\App\Http\Controllers\PretController::class,'destroy']);
 
-Route::get('/client',[ClientController::class,'index']);
-Route::get('/client/{id}',[ClientController::class,'show']);
-Route::get('/client/new',[ClientController::class,'create']);
-Route::get('/client/add',[ClientController::class,'store']);
-Route::get('/client/delete/{id}',[ClientController::class,'delete']);
+Route::get('/client',[\App\Http\Controllers\ClientController::class,'index']);
+Route::get('/client/new',[\App\Http\Controllers\ClientController::class,'create']);
+Route::post('/client/add',[\App\Http\Controllers\ClientController::class,'store']);
+Route::get('/client/{id}',[\App\Http\Controllers\ClientController::class,'show']);
+Route::get('/client/delete/{id}',[\App\Http\Controllers\ClientController::class,'delete']);
+
+Route::get('/responsable',[\App\Http\Controllers\ResponsableController::class,'index']);
+Route::get('/responsable/new',[\App\Http\Controllers\ResponsableController::class,'create']);
+Route::post('/responsable/add',[\App\Http\Controllers\ResponsableController::class,'store']);
+Route::get('/responsable/{id}',[\App\Http\Controllers\ResponsableController::class,'show']);
+Route::get('/responsable/delete/{id}',[\App\Http\Controllers\ResponsableController::class,'delete']);
+
+Route::get('/mode_payement',[\App\Http\Controllers\ModePayementController::class,'index']);
+Route::get('/mode_payement/{id}',[\App\Http\Controllers\ModePayementController::class,'show']);
+Route::get('/mode_payement/new',[\App\Http\Controllers\ModePayementController::class,'create']);
+Route::get('/mode_payement/add',[\App\Http\Controllers\ModePayementController::class,'store']);
+Route::get('/mode_payement/delete/{id}',[\App\Http\Controllers\ModePayementController::class,'delete']);
