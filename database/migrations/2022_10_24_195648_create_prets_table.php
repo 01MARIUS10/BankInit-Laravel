@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('prets', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('Responsable_id')->unsigned();
+            $table->bigInteger('Client_id')->unsigned();
+            $table->bigInteger('Amount');
+            $table->dateTime('LoanDate');
+            $table->dateTime('RepayementEndDate');
+            $table->bigInteger('RepayementFrequency_id')->unsigned();
+            $table->bigInteger('BenefitPayementMethod_fk')->unsigned();
+            $table->bigInteger('CapitalPayementMethod_fk')->unsigned();
+            $table->text('Remark');
+            $table->boolean('ClosedContrat');
             $table->timestamps();
         });
     }

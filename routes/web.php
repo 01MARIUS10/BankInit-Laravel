@@ -47,3 +47,15 @@ Route::get('/mode_payement/{id}',[\App\Http\Controllers\ModePayementController::
 Route::get('/mode_payement/new',[\App\Http\Controllers\ModePayementController::class,'create']);
 Route::get('/mode_payement/add',[\App\Http\Controllers\ModePayementController::class,'store']);
 Route::get('/mode_payement/delete/{id}',[\App\Http\Controllers\ModePayementController::class,'delete']);
+
+Route::get('/RepayementFrequency',[\App\Http\Controllers\RepayementFrequencyController::class,'index']);
+Route::get('/RepayementFrequency/{id}',[\App\Http\Controllers\RepayementFrequencyController::class,'show']);
+Route::get('/RepayementFrequency/new',[\App\Http\Controllers\RepayementFrequencyController::class,'create']);
+Route::get('/RepayementFrequency/add',[\App\Http\Controllers\RepayementFrequencyController::class,'store']);
+Route::get('/RepayementFrequency/delete/{id}',[\App\Http\Controllers\RepayementFrequencyController::class,'delete']);
+
+Route::get('/Repayement',[\App\Http\Controllers\RepayementController::class,'index']);
+Route::get('/Repayement/{id}',[\App\Http\Controllers\RepayementController::class,'show']);
+Route::get('/Repayement/new',[\App\Http\Controllers\RepayementController::class,'create']);
+Route::get('/Repayement/add',[\App\Http\Controllers\RepayementController::class,'store']);
+Route::get('/Repayement/delete/{id}',[\App\Http\Controllers\RepayementController::class,'delete']);
