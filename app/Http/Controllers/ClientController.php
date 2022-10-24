@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pret;
-use Brick\Math\BigInteger;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class PretController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class PretController extends Controller
      */
     public function index()
     {
-        $prets = Pret::all();
-        return view ('prets.index ')->with('prets',$prets);
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class PretController extends Controller
      */
     public function create()
     {
-        return view('prets.create');
+        //
     }
 
     /**
@@ -38,30 +35,27 @@ class PretController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        Pret::create($input);
-        return redirect('pret')->with('flash_message','Pret Added!');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $pret = Pret::find($id);
-        return view("pret.show")->with('pret',$pret);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\pret  $pret
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(pret $pret)
+    public function edit($id)
     {
         //
     }
@@ -70,10 +64,10 @@ class PretController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\pret  $pret
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pret $pret)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -81,10 +75,10 @@ class PretController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\pret  $pret
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pret $pret)
+    public function destroy($id)
     {
         //
     }
