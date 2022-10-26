@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::table('prets', function (Blueprint $table) {
             $table->foreign('Responsable_id')->references('id')->on('responsables')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreign('Client_id')->references('id')->on('clients')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreign('RepayementFrequency_id')->references('id')->on('repayement_frequencies')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreign('BenefitPayementMethod_fk')->references('id')->on('mode_payements')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreign('CapitalPayementMethod_fk')->references('id')->on('mode_payements')->cascadeOnUpdate()->cascadeOnDelete();
         });

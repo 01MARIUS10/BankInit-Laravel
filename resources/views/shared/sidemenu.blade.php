@@ -10,7 +10,7 @@
 </nav>
 <div class="navbar-nav align-items-center mx-2 mt-5">
     <a class="nav-item nav-link m-2 w-100 bg-dark border border-light text-white text-center @if(Route::is('/pret/index'))  active" @else " href="{{url('/pret')  }}"  @endif >Home</a>
-    <a class="nav-item nav-link m-2 w-100 border border-dark text-dark text-center @if(Route::is('/pret/create')) active" @else " href="{{url('/pret/create')  }}" @endif >add new pret</a>
+    <a class="nav-item nav-link m-2 w-100 border border-dark text-dark text-center @if(Route::is('/pret/create')) active" @else " href="{{url('/pret/new')  }}" @endif >add new pret</a>
     {{-- <a class="nav-item nav-link m-2 w-100 border border-dark text-dark text-center @if(Route::is('/edit/{id}')) active" @else  }}" href="#" @endif ></a>
     <a class="nav-item nav-link m-2 w-100 border border-dark text-dark text-center @if(Route::is('page3')) active" @else " href="{{route('page3')}}" @endif >page3</a> --}}
 </div>

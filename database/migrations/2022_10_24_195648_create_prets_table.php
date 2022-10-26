@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bigInteger('Amount');
             $table->dateTime('LoanDate');
             $table->dateTime('RepayementEndDate');
-            $table->bigInteger('RepayementFrequency_id')->unsigned();
+            $table->integer('RepayementFrequency')->unsigned();
             $table->bigInteger('BenefitPayementMethod_fk')->unsigned();
             $table->bigInteger('CapitalPayementMethod_fk')->unsigned();
             $table->text('Remark');

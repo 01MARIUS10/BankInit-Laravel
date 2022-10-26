@@ -24,6 +24,7 @@
                 </tr>
             </thead>
             <tbody>
+                
                 <!-- {% for client in clients %} -->
                 @foreach ($prets as $pret)
                 <tr class="p-1">

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\ModePayement;
 use App\Models\Pret;
 use Brick\Math\BigInteger;
+use App\Models\Responsable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -17,7 +20,7 @@ class PretController extends Controller
     public function index()
     {
         $prets = Pret::all();
-        return view ('prets.index ')->with('prets',$prets);
+        return view ('pret.index ')->with('prets',$prets);
     }
 
     /**
@@ -27,7 +30,11 @@ class PretController extends Controller
      */
     public function create()
     {
-        return view('prets.create');
+        return view('pret.create',[
+            'responsables'=>Responsable::all(),
+            'modePayements'=>ModePayement::all(),
+            'clients'=>Client::all()
+        ]);
     }
 
     /**
